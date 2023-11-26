@@ -1,0 +1,10 @@
+extends layouts/main
+
+block content
+    h1 Hello, Handlebars!
+    form(action="/add-user", method="POST")
+        label(for="username").form-label Name: 
+        input(type="text", name="username")#username.form-control.mb-3
+        label(for="password").form-label Password:
+        input(type="password", name="password")#password.form-control.mb-3
+        button(type="submit").btn.btn-success Add User 

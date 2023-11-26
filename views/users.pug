@@ -1,0 +1,11 @@
+extends layouts/main
+
+block content
+    if users.length > 0
+        ul.list-group
+            each user in users
+                li.list-group-item
+                    p Name: #{user.username} <br>
+                    |  Password: #{user.password}
+    else 
+        h1 No Users found!
